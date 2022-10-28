@@ -1,16 +1,9 @@
 <?php
 
-require_once __DIR__ . '/src/view.php';
-require_once __DIR__ . '/src/helpers.php';
+require_once __DIR__ . '/src/includes/renderer.php';
 
-render( '__header', [ 'title' => "SakilaDB Register" ] );
+render( "__header", ["title"=>"Add Customer"] );
 
+render( "home" );
 
-if ( isGetRequest() ) {
-    render( 'register' );
-} else {
-    render( 'register_backend' );
-}
-
-
-render( '__footer' );
+render( "__footer" );
